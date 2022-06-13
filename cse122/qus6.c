@@ -14,13 +14,16 @@ number = number/10;
 return ( n) ;
 }
 
+What will be the values of x and y when the following statement are executed?
+int x = test (135);
+int y= test (246 );
+
 
 
 
 Ans:
 
-What will be the values of x and y when the following statement are executed
 int x = test (135);
-answer : x=3
+answer : x = 3
 int y= test (246 );
-Answer : y=o
+Answer : y = 0
