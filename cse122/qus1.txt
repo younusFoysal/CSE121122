@@ -1,0 +1,10 @@
+Qus: Describe the limitations of using getchar and scanf 
+functions for reading strings.
+
+Ans:
+
+1. By using getchar we can read only one character from the keyboard.
+So we can’t read the full string.
+
+2. The limitation of scanf function is that it terminates its input on the first white space it finds.
+A whitespace is included with blanks , tabs ,carriage returns , form feeds and new lines.
