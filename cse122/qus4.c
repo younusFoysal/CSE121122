@@ -20,7 +20,6 @@ int roll;
 float marks;
 } s[100];
 
-void bubbleSortDesc(struct student stud_list[], int s);
 int main()
 {
 int i,n;
@@ -38,42 +37,26 @@ scanf("%s", s[i].name);
 printf("Enter roll number: ");
 scanf("%d", &s[i].roll);
 
-printf("Enter marks: |");
+printf("Enter marks: ");
 scanf("%f", &s[i].marks);
 }
 
-bubbleSortDesc(s, n);
-
 printf("Displaying Information:\n");
-printf("\tName \t roll_number \t marks\n");
 for(i=0;i<n;i++)
 {
-printf("\t%s \t%d \t%.1f \n",s[i].name,s[i].roll,s[i].marks);
+printf("\n %d no. student info\n",i+1);
+printf("\tName:%s\n ",s[i].name);
+//or use
+// puts(s[i].name);
+
+printf("\t Roll number: %d\n",s[i].roll);
+
+printf("\t Marks: %.1f\n\n",s[i].marks);
+
 }
 
 return 0;
 }
-
-void bubbleSortDesc(struct student stud_list[100], int s)
-{
-int i, j;
-struct student temp;
-
-for (i = 0; i < s – 1; i++)
-{
-for (j = 0; j < (s – 1-i); j++)
-{
-if (stud_list[j].marks < stud_list[j + 1].marks)
-{
-temp = stud_list[j];
-stud_list[j] = stud_list[j + 1];
-stud_list[j + 1] = temp;
-}
-}
-}
-}
-
-
 
 
 
