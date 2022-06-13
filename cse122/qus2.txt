@@ -1,0 +1,10 @@
+Qus: Character strings in C are automatically terminated by the 
+null character.
+Explain how this feature helps in string manipulations.
+
+Ans:
+We know that a string is not a data types in c, but it is considered a data 
+structure stored in array. The string is a variable-length structure and is 
+stored in a fixed-array. therefore, the last element of an array need not be 
+represent at the end.
+It is automatically terminate by null character.
