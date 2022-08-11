@@ -16,7 +16,7 @@ int main()
     int i,n,square;
     fprintf(file2,"computes the square \n");
 
-    for(i=0; i<5; ++i)
+    for(i=0; i<1; ++i)
     {
         fscanf(file1,"%d",&n);
         square = n*n;
