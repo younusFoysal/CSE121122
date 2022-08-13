@@ -34,4 +34,15 @@ int main()
     fclose(file1);
     fclose(file2);
 }
+/*
+file name : input001.txt
 
+Id	Name	Department
+001	shuvo	CSE
+002	emon	EEE
+
+file name : output001.txt
+
+empty
+
+*/
