@@ -8,7 +8,6 @@ and places the resultant values in a different file. */
 
 int main()
 {
-
     FILE *file1,*file2;
     file1 = fopen("input002.txt","r");
     file2 = fopen("output002.txt","a");
@@ -16,7 +15,7 @@ int main()
     int i,n,square;
     fprintf(file2,"computes the square \n");
 
-    for(i=0; i<1; ++i)
+    for(i=0; i<5; ++i)
     {
         fscanf(file1,"%d",&n);
         square = n*n;
@@ -28,3 +27,13 @@ int main()
     fclose(file1);
     fclose(file2);
 }
+/*
+file name : input002.txt
+
+1 2 3 4 5
+
+file name : output002.txt
+
+empty
+
+*/
