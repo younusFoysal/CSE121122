@@ -3,43 +3,31 @@
 
 #include<stdio.h>
 
-int main()
+int main(int argc,char *argv[])
 {
-    char id[50],name[50],dep[50];
+    FILE *fp,*f1,*f2;
+    char n;
 
-    FILE *file1,*file2;
-    file1 = fopen("input001.txt","r");
-    file2 = fopen("output001.txt","a");
+    fp = fopen(argv[1],"w");
 
+    f1 = fopen("DATA1.txt","r");
+    f2 = fopen("DATA2.txt","r");
 
-    fscanf(file1,"%s %s %s",id,name,dep);
-
-    printf("%s\t%s\t%s\n",id,name,dep);
-
-    fprintf(file2,"%s\t%s\t%s\n",id,name,dep);
-
-    int i;
-    int ID;
-
-    for(i=1; i<3; i++)
+    n = fgetc(f1);
+    while(n != EOF)
     {
-        fscanf(file1,"%d %s %s",&ID,name,dep);
-        printf("%d\t%s\t%s\n",ID,name,dep);
-        fprintf(file2,"%d\t%s\t%s\n",ID,name,dep);
+        fputc(n,fp);
+        n = fgetc(f1);
+    }
+    
+    n = fgetc(f2);
+    while(n != EOF)
+    {
+        fputc(n,fp);
+        n = fgetc(f2);
     }
 
-    fclose(file1);
-    fclose(file2);
+    fclose(f1);
+    fclose(f2);
+    fclose(fp);
 }
-/*
-file name : input001.txt
-
-Id	Name	Department
-001	shuvo	CSE
-002	emon	EEE
-
-file name : output001.txt
-
-empty
-
-*/
