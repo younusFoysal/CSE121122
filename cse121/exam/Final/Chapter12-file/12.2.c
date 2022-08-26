@@ -1,4 +1,8 @@
-//Qus:  Write a program that promotes the user for two files, one containing a line of text known as source file and other ,an empty file known as target file and then copies the contents of source file into target file.
+//Qus: Two files DATA1 and DATA2 contain sorted lists of integers.Write a program to produce a 3rd file 
+
+// DATA which holds a single sorted,merged list of these two lists.Use command line arguments to 
+
+// specify the file names.
 
 
 #include<stdio.h>
